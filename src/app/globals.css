@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #ffc857;
   --foreground: #171717;
 }
 
@@ -10,6 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-orange-primary: #ffc857;
+  --color-orange-secondary: #ff6b35;
+  --color-gray-primary: #232121;
+  --font-readex: "Readex Pro", sans-serif;
+  --font-fredoka: "Fredoka", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
