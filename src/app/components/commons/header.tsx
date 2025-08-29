@@ -14,7 +14,7 @@ const Header = () => {
           <Image src="/sos-logo.png" width={67} height={70} alt="SOS logo" />
         </Link>
         <nav>
-          <ul className="flex items-center gap-7 ">
+          <ul className="flex items-center gap-7 uppercase">
             <li>
               <Link href="/" className="hover:text-orange-secondary">
                 Home
@@ -49,17 +49,23 @@ const Header = () => {
         </nav>
         <ul className="flex items-center gap-5">
           <li>
-            <Link href="https://facebook.com">
+            <Link
+              className="hover:text-orange-secondary"
+              href="https://facebook.com"
+            >
               <FaFacebookSquare size={30} />
             </Link>
           </li>
           <li>
-            <Link href="https://instagram.com">
+            <Link
+              className="hover:text-orange-secondary"
+              href="https://instagram.com"
+            >
               <FaInstagramSquare size={30} />
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link className="hover:text-orange-secondary" href="/">
               <FaEnvelope size={30} />
             </Link>
           </li>
