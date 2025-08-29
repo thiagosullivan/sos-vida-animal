@@ -49,6 +49,37 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="div-com-before w-full min-h-44 block"></div>
+      <div className="bg-white py-10">
+        <div className="w-full mx-auto max-w-7xl flex justify-around items-center gap-12">
+          <div className="max-w-[350px] w-full">
+            <Image
+              src="/dog-2.png"
+              alt="Cachorro"
+              height={0}
+              width={0}
+              sizes="100vw"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="flex flex-col gap-6 items-center">
+            <h3 className="text-7xl text-orange-secondary">
+              Me leva pra casa?
+            </h3>
+            <p className="font-readex text-gray-primary">
+              As Feiras de Adoção de Cães e Gatos, promovidas pela SOS Vida
+              Animal, são realizadas para que você encontre o seu novo melhor
+              amigo.
+            </p>
+            <Button
+              className="bg-orange-primary text-xl py-7 px-5 shadow-xl/20"
+              asChild
+            >
+              <Link href="/">Feirinha de Adoção</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

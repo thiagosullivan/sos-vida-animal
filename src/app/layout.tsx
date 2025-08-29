@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fredoka.className} ${readex.variable} antialiased `}>
-        <div className="bg-orange-primary min-h-screen">
+        <div className="bg-orange-primary">
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>
