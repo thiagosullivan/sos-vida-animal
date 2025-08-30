@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fredoka.className} ${readex.variable} antialiased `}>
-        <div className="bg-orange-primary">
+        <div className="bg-white">
           <Header />
           {children}
           <Footer />

@@ -127,20 +127,39 @@
 }
 
 @layer components {
-  .div-com-before {
+  .vector-white {
     @apply relative; /* Posicionamento relativo para o pseudo-elemento */
   }
 
-  .div-com-before::before {
+  .vector-white::before {
     content: "";
     background-image: url("/vector-white.png");
-    background-size: content;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110%;
     top: 0;
+    left: 0;
+    z-index: 1; /* Coloca atrás do conteúdo */
+    opacity: 1; /* Ajuste a opacidade se necessário */
+  }
+
+  .vector-orange {
+    @apply relative; /* Posicionamento relativo para o pseudo-elemento */
+  }
+
+  .vector-orange::after {
+    content: "";
+    background-image: url("/vector-orange.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: -2px;
     left: 0;
     z-index: 1; /* Coloca atrás do conteúdo */
     opacity: 1; /* Ajuste a opacidade se necessário */
