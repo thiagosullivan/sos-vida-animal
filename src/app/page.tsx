@@ -123,6 +123,57 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Infos */}
+      <div className="bg-white">
+        <div className="vector-orange w-full min-h-44 block"></div>
+        <div className="w-full mx-auto max-w-7xl pt-10">
+          <h3 className="uppercase text-orange-primary text-7xl mb-7">
+            Informações
+          </h3>
+          <p className="font-readex text-xl text-gray-primary mb-7">
+            Descubra por onde começar e quais os primeiros cuidados.
+          </p>
+          <div className="flex justify-between items-center">
+            <div className="max-w-[350px] w-full">
+              <Image
+                src="/cat-1.png"
+                alt="Gato"
+                height={0}
+                width={0}
+                sizes="100vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <ul className="flex flex-col gap-4 items-end">
+              <li className="flex items-center">
+                Regras para levar seu animal em nossas feiras{" "}
+                <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                  <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                </div>
+              </li>
+              <li className="flex items-center">
+                Veja os nossos vídeos{" "}
+                <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                  <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                </div>
+              </li>
+              <li className="flex items-center">
+                Projeto controle de natalidade{" "}
+                <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                  <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                </div>
+              </li>
+              <li className="flex items-center">
+                Nossa ONG não resgata animais{" "}
+                <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                  <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
