@@ -2,7 +2,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-import { work } from "../data";
+import { reviews, work } from "../data";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Home() {
   console.log(work, "work");
@@ -85,6 +93,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* Work */}
       <div className="bg-orange-secondary py-24 text-white">
         <div className="w-full mx-auto max-w-7xl">
@@ -127,7 +136,7 @@ export default function Home() {
       {/* Infos */}
       <div className="bg-white">
         <div className="vector-orange w-full min-h-44 block"></div>
-        <div className="w-full mx-auto max-w-7xl pt-10">
+        <div className="w-full mx-auto max-w-7xl py-10">
           <h3 className="uppercase text-orange-primary text-7xl mb-7">
             Informações
           </h3>
@@ -171,6 +180,46 @@ export default function Home() {
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Reviews */}
+      <div className="bg-orange-primary py-14">
+        <div className="w-full mx-auto max-w-7xl">
+          <h3 className="text-gray-primary text-5xl text-center mb-7">
+            Depoimentos
+          </h3>
+          <div className="max-w-2xl mx-auto">
+            <Carousel>
+              <CarouselContent className="-ml-1">
+                {reviews.map((item) => (
+                  <CarouselItem
+                    className="pl-3 md:basis-1/2 lg:basis-1/3"
+                    key={item.id}
+                  >
+                    <div className="flex flex-col items-center gap-4 bg-white p-5 rounded-sm">
+                      <Image
+                        src={item.img}
+                        alt={item.name}
+                        width={80}
+                        height={80}
+                        className="rounded-full"
+                      />
+                      <p className="text-gray-primary font-bold border-b-1 border-orange-primary pb-2">
+                        {item.name}
+                      </p>
+                      {/* <div className="h-[1px] w-full"></div> */}
+                      <p className="font-readex font-light text-sm text-center">
+                        {item.review}
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </div>

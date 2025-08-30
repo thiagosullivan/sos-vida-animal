@@ -40,3 +40,41 @@ export const work = [
     text: "Promover e estimular a castração de animais (fêmeas e machos), a fim de diminuir a superpopulação de animais, o que gera e incentiva o abandono dos mesmos;",
   },
 ];
+
+export const reviews = [
+  {
+    id: "1",
+    img: "/work-7.png",
+    name: "Cecilia Martine",
+    review:
+      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+  },
+  {
+    id: "2",
+    img: "/work-7.png",
+    name: "Cecilia Martine",
+    review:
+      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+  },
+  {
+    id: "3",
+    img: "/work-7.png",
+    name: "Cecilia Martine",
+    review:
+      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+  },
+  {
+    id: "4",
+    img: "/work-7.png",
+    name: "Cecilia Martine",
+    review:
+      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+  },
+  {
+    id: "5",
+    img: "/work-7.png",
+    name: "Cecilia Martine",
+    review:
+      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+  },
+];
