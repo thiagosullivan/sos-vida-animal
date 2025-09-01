@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/commons/header";
 import Footer from "./components/commons/footer";
+import ScrollToTop from "./components/commons/scrollToTop";
 
 const fredoka = localFont({
   src: "./fonts/fredoka-one-regular.ttf",
@@ -33,6 +34,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <ScrollToTop />
       </body>
     </html>
   );
