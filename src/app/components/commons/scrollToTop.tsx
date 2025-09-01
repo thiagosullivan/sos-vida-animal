@@ -9,7 +9,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 20;
+      const scrollThreshold = 10;
       const isScrolled = window.scrollY > scrollThreshold;
       setShowScroll(isScrolled);
     };
