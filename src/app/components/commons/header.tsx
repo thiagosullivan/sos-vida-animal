@@ -14,7 +14,7 @@ const Header = () => {
     <div className="bg-orange-primary border-b-1 border-black">
       {/* Desktop */}
       <div className="hidden lg:block">
-        <header className="py-7 px-4 border-black border-b-1">
+        <header className="py-7 px-4">
           <div className="w-full mx-auto max-w-7xl flex justify-between items-center text-gray-primary font-readex gap-12">
             <Link href="/">
               <Image

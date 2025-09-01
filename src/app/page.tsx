@@ -113,7 +113,7 @@ export default function Home() {
               Animal, são realizadas para que você encontre o seu novo melhor
               amigo.
             </p>
-            <div>
+            <div className="block lg:hidden">
               <Image
                 src="/dog-2-mobile.png"
                 alt="Cachorro"

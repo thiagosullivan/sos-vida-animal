@@ -58,14 +58,14 @@ const MobileMenu = () => {
   ];
 
   return (
-    <>
+    <div className="block lg:hidden">
       <div className="flex justify-between py-4 px-2">
         <Link href="/">
           <Image src="/sos-logo.png" width={67} height={70} alt="SOS logo" />
         </Link>
         <button
           onClick={() => setIsOpen(true)}
-          className="lg:hidden p-2 hover:bg-gray-100 rounded"
+          className="lg:hidden p-2 hover:cursor-pointer rounded"
           aria-label="Abrir menu"
         >
           <Menu className="h-6 w-6" />
@@ -84,7 +84,7 @@ const MobileMenu = () => {
               <span className="font-semibold">Menu</span>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded"
+                className="p-2 hover:cursor-pointer rounded"
                 aria-label="Fechar menu"
               >
                 <X className="h-5 w-5" />
@@ -98,14 +98,14 @@ const MobileMenu = () => {
                     {item.type === "hash" ? (
                       <button
                         onClick={() => handleHashClick(item.href)}
-                        className="w-full text-left p-3 hover:bg-gray-100 rounded-lg transition-colors uppercase"
+                        className="w-full text-left p-3 hover:cursor-pointer rounded-lg transition-colors uppercase"
                       >
                         {item.label}
                       </button>
                     ) : (
                       <Link
                         href={item.href}
-                        className="block p-3 hover:bg-gray-100 rounded-lg transition-colors"
+                        className="block p-3 rounded-lg transition-colors"
                         onClick={handlePageClick}
                       >
                         {item.label}
@@ -144,7 +144,7 @@ const MobileMenu = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 
