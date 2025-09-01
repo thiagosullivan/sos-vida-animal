@@ -44,24 +44,24 @@ export const work = [
 export const reviews = [
   {
     id: "1",
-    img: "/work-7.png",
+    img: "/cecilia-martine.png",
     name: "Cecilia Martine",
     review:
       "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
   },
   {
     id: "2",
-    img: "/work-7.png",
-    name: "Cecilia Martine",
+    img: "/camila-taari.png",
+    name: "Camila Taari",
     review:
-      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+      "Maravilhosos! Que Deus abençoe! Fazem uma bela ação em prol dos animais.",
   },
   {
     id: "3",
-    img: "/work-7.png",
-    name: "Cecilia Martine",
+    img: "/tania-borges.png",
+    name: "Tania Borges",
     review:
-      "Gente obrigada pela força, já encontrei meu bebezinho! Obrigada mesmo!",
+      "Trabalho árduo e merecedor de respeito e gratidão. Quem ganha são os peludinhos.",
   },
   {
     id: "4",
