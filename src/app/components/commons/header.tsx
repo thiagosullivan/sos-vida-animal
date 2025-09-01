@@ -1,20 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 import {
   FaEnvelope,
   FaFacebookSquare,
@@ -23,25 +10,8 @@ import {
 import MobileMenu from "./mobileHeader";
 
 const Header = () => {
-  const router = useRouter();
-  const [open, setOpen] = useState(false);
-
-  const handleNavigation = (href: string) => {
-    if (href.startsWith("#")) {
-      // É um hash link - scroll suave
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      // É uma navegação normal
-      router.push(href);
-    }
-    setOpen(false); // Fecha o menu manualmente
-  };
-
   return (
-    <div className="bg-orange-primary">
+    <div className="bg-orange-primary border-b-1 border-black">
       {/* Desktop */}
       <div className="hidden lg:block">
         <header className="py-7 px-4 border-black border-b-1">

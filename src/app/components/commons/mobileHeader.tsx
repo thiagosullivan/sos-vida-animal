@@ -17,7 +17,6 @@ const MobileMenu = () => {
   const router = useRouter();
   const isHomePage = pathname === "/";
 
-  // Bloquear scroll quando menu estiver aberto
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";

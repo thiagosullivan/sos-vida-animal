@@ -35,26 +35,26 @@ export default function Home() {
   return (
     <div className="h-full pt-6 lg:pt-14 bg-orange-primary">
       {/* Hero */}
-      <div className="w-full mx-auto max-w-7xl">
-        <h2 className="font-fredoka text-6xl text-gray-primary text-center mb-14">
+      <div className="w-full mx-auto max-w-7xl px-4 mb-6">
+        <h2 className="font-fredoka text-3xl lg:text-6xl text-gray-primary text-center mb-5 lg:mb-14 uppercase">
           Nós apoiamos a vida animal!
         </h2>
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex flex-col gap-10 font-readex xl:max-w-[730px] justify-between h-full">
-            <p className="text-white text-3xl uppercase">
+        <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-4">
+          <div className="flex flex-col gap-5 lg:gap-10 font-readex xl:max-w-[730px] justify-between h-full">
+            <p className="text-white lg:text-3xl uppercase">
               Desde 1989, a SOS Vida Animal promove um trabalho para a
               comunidade de Londrina e região, mantido por voluntários que se
               dedicam à causa animal.
             </p>
-            <div className="w-full max-w-[230px] h-1 bg-gray-primary" />
-            <p className="text-[1.25rem] mb-10">
+            <div className="w-full max-w-[120px] lg:max-w-[230px] h-1 bg-gray-primary" />
+            <p className="lg:text-[1.25rem] mb-10">
               Nós não acolhemos animais, e sim promovemos o bem-estar de cães e
               gatos, através de eventos para adoções e campanhas de
               conscientização.
             </p>
-            <div className="flex gap-7">
+            <div className="flex flex-col lg:flex-row gap-y-2 lg:gap-7 items-center mb-8">
               <Button
-                className="bg-orange-secondary shadow-xl/20 flex text-2xl font-fredoka py-7 px-5"
+                className="bg-orange-secondary shadow-xl/20 flex text-2xl font-fredoka max-w-[250px] lg:max-w-none  py-7 px-5"
                 asChild
               >
                 <Link href="https://www.instagram.com/sosvidaanimallondrina/">
@@ -62,14 +62,14 @@ export default function Home() {
                 </Link>
               </Button>
               <Button
-                className="bg-orange-primary shadow-xl/20 flex text-2xl font-fredoka py-7 px-5"
+                className="bg-orange-primary shadow-xl/20 flex text-2xl font-fredoka max-w-[250px] lg:max-w-none py-7 px-5"
                 asChild
               >
                 <Link href="/doacao">Faça uma doação</Link>
               </Button>
             </div>
           </div>
-          <div>
+          <div className="hidden lg:block">
             <Image
               src="/dog-1.png"
               height={0}
@@ -79,13 +79,22 @@ export default function Home() {
               alt="Cachorro"
             />
           </div>
+          <div className="block lg:hidden">
+            <Image
+              src="/dog-1-mobile.png"
+              height={220}
+              width={190}
+              sizes="100vw"
+              alt="Cachorro"
+            />
+          </div>
         </div>
       </div>
       {/* Adoption */}
-      <div className="vector-white w-full min-h-44 block"></div>
-      <div className="bg-white py-10">
+      <div className="vector-white w-full min-h-11 lg:min-h-44 block"></div>
+      <div className="bg-white py-10 px-4">
         <div className="w-full mx-auto max-w-7xl flex justify-around items-center gap-12">
-          <div className="max-w-[350px] w-full">
+          <div className="hidden lg:block max-w-[350px] w-full">
             <Image
               src="/dog-2.png"
               alt="Cachorro"
@@ -96,14 +105,23 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col gap-6 items-center">
-            <h3 className="text-7xl text-orange-secondary">
+            <h3 className="text-4xl lg:text-7xl text-orange-secondary">
               Me leva pra casa?
             </h3>
-            <p className="font-readex text-gray-primary">
+            <p className="text-sm lg:text-base font-readex text-gray-primary">
               As Feiras de Adoção de Cães e Gatos, promovidas pela SOS Vida
               Animal, são realizadas para que você encontre o seu novo melhor
               amigo.
             </p>
+            <div>
+              <Image
+                src="/dog-2-mobile.png"
+                alt="Cachorro"
+                width={195}
+                height={225}
+                sizes="100vw"
+              />
+            </div>
             <Button
               className="bg-orange-primary text-xl py-7 px-5 shadow-xl/20"
               asChild
@@ -118,9 +136,9 @@ export default function Home() {
 
       {/* Work */}
       <section id="oquefazemos">
-        <div className="bg-orange-secondary py-24 text-white">
+        <div className="bg-orange-secondary py-10 px-4 lg:py-24 text-white">
           <div className="w-full mx-auto max-w-7xl">
-            <h2 className="text-6xl text-center uppercase mb-6">
+            <h2 className="text-4xl lg:text-7xl text-center uppercase mb-6">
               O que fazemos?
             </h2>
             <p className="text-sm font-readex text-center font-light mb-20">
@@ -132,20 +150,33 @@ export default function Home() {
               Estadual pela Lei n. 12.580 de 08/06/1999. Atua desde 1989 em
               Londrina e região.
             </p>
-            <div className="grid gap-8 grid-cols-4 justify-items-center mb-16">
+            <div className="grid gap-8 grid-cols-2 lg:grid-cols-4 justify-items-center mb-16">
               {work.map((item) => (
                 <div
                   key={item.id}
-                  className="max-w-[300px] w-full border-l border-white-2 border-b flex justify-center items-center flex-col p-2.5"
+                  className="max-w-[180px] lg:max-w-[300px] w-full border-l border-white-2 border-b flex justify-center items-center flex-col p-2.5"
                 >
-                  <Image
-                    src={item.img}
-                    alt={item.text}
-                    width={150}
-                    height={150}
-                    className="mb-2.5"
-                  />
-                  <p className="font-light font-readex pb-2.5">{item.text}</p>
+                  <div className="hidden lg:block">
+                    <Image
+                      src={item.img}
+                      alt={item.text}
+                      width={150}
+                      height={150}
+                      className="mb-2.5"
+                    />
+                  </div>
+                  <div className="block lg:hidden">
+                    <Image
+                      src={item.img}
+                      alt={item.text}
+                      width={75}
+                      height={75}
+                      className="mb-2.5"
+                    />
+                  </div>
+                  <p className="text-sm/4 text-center lg:text-start lg:text-base font-light font-readex pb-2.5">
+                    {item.text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -161,16 +192,16 @@ export default function Home() {
       {/* Infos */}
       <section id="informacoes">
         <div className="bg-white">
-          <div className="vector-orange w-full min-h-44 block"></div>
-          <div className="w-full mx-auto max-w-7xl py-10">
-            <h3 className="uppercase text-orange-primary text-7xl mb-7">
+          <div className="vector-orange w-full min-h-10 lg:min-h-44 block"></div>
+          <div className="w-full mx-auto max-w-7xl py-20 px-4">
+            <h3 className="uppercase text-center lg:text-start text-orange-primary text-4xl lg:text-7xl mb-4 lg:mb-7">
               Informações
             </h3>
-            <p className="font-readex text-xl text-gray-primary mb-7">
+            <p className="font-readex text-center lg:text-start text-sm lg:text-xl text-gray-primary mb-7">
               Descubra por onde começar e quais os primeiros cuidados.
             </p>
-            <div className="flex justify-between items-center">
-              <div className="max-w-[350px] w-full">
+            <div className="flex flex-col lg:flex-row justify-between items-center">
+              <div className="max-w-[165px] lg:max-w-[350px] w-full max-sm:mb-3">
                 <Image
                   src="/cat-1.png"
                   alt="Gato"
@@ -180,32 +211,62 @@ export default function Home() {
                   className="h-auto w-full"
                 />
               </div>
-              <ul className="flex flex-col gap-4 items-end">
-                <li className="flex items-center">
-                  Regras para levar seu animal em nossas feiras{" "}
-                  <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
-                    <Image src="/paw.svg" width={25} height={25} alt="pata" />
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  Veja os nossos vídeos{" "}
-                  <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
-                    <Image src="/paw.svg" width={25} height={25} alt="pata" />
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  Projeto controle de natalidade{" "}
-                  <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
-                    <Image src="/paw.svg" width={25} height={25} alt="pata" />
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  Nossa ONG não resgata animais{" "}
-                  <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
-                    <Image src="/paw.svg" width={25} height={25} alt="pata" />
-                  </div>
-                </li>
-              </ul>
+              <div className="hidden lg:block">
+                <ul className="flex flex-col gap-4 items-end">
+                  <li className="flex items-center">
+                    Regras para levar seu animal em nossas feiras{" "}
+                    <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                      <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                    </div>
+                  </li>
+                  <li className="flex items-center">
+                    Veja os nossos vídeos{" "}
+                    <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                      <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                    </div>
+                  </li>
+                  <li className="flex items-center">
+                    Projeto controle de natalidade{" "}
+                    <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                      <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                    </div>
+                  </li>
+                  <li className="flex items-center">
+                    Nossa ONG não resgata animais{" "}
+                    <div className="bg-orange-secondary h-8 w-8 flex items-center justify-center rounded-sm ml-2">
+                      <Image src="/paw.svg" width={25} height={25} alt="pata" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="block lg:hidden">
+                <ul className="flex flex-col gap-2 items-center">
+                  <li className="flex items-center">
+                    <div className="bg-orange-secondary h-6 w-6 flex items-center justify-center rounded-sm mr-2">
+                      <Image src="/paw.svg" width={17} height={17} alt="pata" />
+                    </div>
+                    Regras para levar seu animal em nossas feiras{" "}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-orange-secondary h-6 w-6 flex items-center justify-center rounded-sm mr-2">
+                      <Image src="/paw.svg" width={17} height={17} alt="pata" />
+                    </div>
+                    Veja os nossos vídeos{" "}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-orange-secondary h-6 w-6 flex items-center justify-center rounded-sm mr-2">
+                      <Image src="/paw.svg" width={17} height={17} alt="pata" />
+                    </div>
+                    Projeto controle de natalidade{" "}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-orange-secondary h-6 w-6 flex items-center justify-center rounded-sm mr-2">
+                      <Image src="/paw.svg" width={17} height={17} alt="pata" />
+                    </div>
+                    Nossa ONG não resgata animais{" "}
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -213,7 +274,7 @@ export default function Home() {
 
       {/* Reviews */}
       <section id="finalfeliz">
-        <div className="bg-orange-primary py-14">
+        <div className="bg-orange-primary py-14 px-4">
           <div className="w-full mx-auto max-w-7xl">
             <h3 className="text-gray-primary text-5xl text-center mb-7">
               Depoimentos
@@ -223,7 +284,7 @@ export default function Home() {
                 <CarouselContent className="-ml-1">
                   {reviews.map((item) => (
                     <CarouselItem
-                      className="pl-3 md:basis-1/2 lg:basis-1/3"
+                      className="lg:pl-3 md:basis-1/2 lg:basis-1/3"
                       key={item.id}
                     >
                       <div className="flex flex-col items-center gap-4 bg-white p-5 rounded-sm">
