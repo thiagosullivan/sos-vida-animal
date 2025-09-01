@@ -43,9 +43,9 @@ const ContactPage = () => {
   }
 
   return (
-    <div className="w-full mx-auto max-w-7xl py-10 px-4 font-readex flex justify-between items-center h-[calc(100vh-276px)]">
+    <div className="w-full mx-auto max-w-7xl py-10 px-4 font-readex flex flex-col lg:flex-row justify-between items-center lg:h-[calc(100vh-276px)]">
       <div className="flex flex-col gap-6 max-w-[420px]">
-        <h1 className="text-5xl text-orange-secondary font-fredoka">
+        <h1 className="text-5xl text-orange-secondary font-fredoka text-center lg:text-start">
           Entre em contato
         </h1>
         <div className="w-[200px] h-1.5 bg-gray-primary"></div>
@@ -116,7 +116,7 @@ const ContactPage = () => {
           </Form>
         </div>
       </div>
-      <div className="max-w-[470px] w-full">
+      <div className="max-w-[470px] w-full max-sm:mt-6">
         <Image
           src="/cat-2.png"
           alt="Gato"
