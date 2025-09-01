@@ -8,40 +8,46 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="border-black border-t-1 mt-28">
+    <footer className="border-black border-t-1 bg-orange-primary">
       <div className="w-full mx-auto max-w-7xl flex justify-between items-center text-gray-primary font-readex py-7">
         <Link href="/">
           <Image src="/sos-logo.png" width={67} height={70} alt="SOS logo" />
         </Link>
         <nav>
-          <ul className="flex items-center gap-7 uppercase">
+          <ul className="flex items-center gap-7 uppercase font-bold">
             <li>
               <Link href="/" className="hover:text-orange-secondary">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-orange-secondary">
+              <Link
+                href="/#oquefazemos"
+                className="hover:text-orange-secondary"
+              >
                 O que fazemos
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-orange-secondary">
+              <Link
+                href="/#informacoes"
+                className="hover:text-orange-secondary"
+              >
                 Informações
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-orange-secondary">
+              <Link href="/#finalfeliz" className="hover:text-orange-secondary">
                 Final Feliz
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-orange-secondary">
+              <Link href="/doacao" className="hover:text-orange-secondary">
                 Ajude a ajudar
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-orange-secondary">
+              <Link href="/contato" className="hover:text-orange-secondary">
                 Contato
               </Link>
             </li>
@@ -51,7 +57,7 @@ const Footer = () => {
           <li>
             <Link
               className="hover:text-orange-secondary"
-              href="https://facebook.com"
+              href="https://www.facebook.com/sos.vidaanimal"
             >
               <FaFacebookSquare size={30} />
             </Link>
@@ -59,7 +65,7 @@ const Footer = () => {
           <li>
             <Link
               className="hover:text-orange-secondary"
-              href="https://instagram.com"
+              href="https://www.instagram.com/sosvidaanimallondrina/"
             >
               <FaInstagramSquare size={30} />
             </Link>

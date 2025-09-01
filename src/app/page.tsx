@@ -39,13 +39,15 @@ export default function Home() {
                 className="bg-orange-secondary shadow-xl/20 flex text-2xl font-fredoka py-7 px-5"
                 asChild
               >
-                <Link href="/">Mural de adoção</Link>
+                <Link href="https://www.instagram.com/sosvidaanimallondrina/">
+                  Mural de adoção
+                </Link>
               </Button>
               <Button
                 className="bg-orange-primary shadow-xl/20 flex text-2xl font-fredoka py-7 px-5"
                 asChild
               >
-                <Link href="/">Faça uma doação</Link>
+                <Link href="/doacao">Faça uma doação</Link>
               </Button>
             </div>
           </div>
@@ -88,7 +90,9 @@ export default function Home() {
               className="bg-orange-primary text-xl py-7 px-5 shadow-xl/20"
               asChild
             >
-              <Link href="/">Feirinha de Adoção</Link>
+              <Link href="https://www.instagram.com/sosvidaanimallondrina/">
+                Feirinha de Adoção
+              </Link>
             </Button>
           </div>
         </div>
@@ -96,7 +100,7 @@ export default function Home() {
 
       {/* Work */}
       <div className="bg-orange-secondary py-24 text-white">
-        <div className="w-full mx-auto max-w-7xl">
+        <div className="w-full mx-auto max-w-7xl" id="oquefazemos">
           <h2 className="text-6xl text-center uppercase mb-6">
             O que fazemos?
           </h2>
@@ -127,7 +131,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center w-full">
             <Button className="bg-orange-primary text-2xl py-8 px-4" asChild>
-              <Link href="/">Faça uma doação</Link>
+              <Link href="/doacao">Faça uma doação</Link>
             </Button>
           </div>
         </div>
@@ -136,7 +140,7 @@ export default function Home() {
       {/* Infos */}
       <div className="bg-white">
         <div className="vector-orange w-full min-h-44 block"></div>
-        <div className="w-full mx-auto max-w-7xl py-10">
+        <div className="w-full mx-auto max-w-7xl py-10" id="informacoes">
           <h3 className="uppercase text-orange-primary text-7xl mb-7">
             Informações
           </h3>
@@ -186,7 +190,7 @@ export default function Home() {
 
       {/* Reviews */}
       <div className="bg-orange-primary py-14">
-        <div className="w-full mx-auto max-w-7xl">
+        <div className="w-full mx-auto max-w-7xl" id="finalfeliz">
           <h3 className="text-gray-primary text-5xl text-center mb-7">
             Depoimentos
           </h3>
