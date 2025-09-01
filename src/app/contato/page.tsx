@@ -4,10 +4,8 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -41,13 +39,11 @@ const ContactPage = () => {
     },
   });
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values);
   }
 
   return (
-    <div className="w-full mx-auto max-w-7xl py-10 px-4 font-readex flex justify-between h-[calc(100vh-276px)]">
+    <div className="w-full mx-auto max-w-7xl py-10 px-4 font-readex flex justify-between items-center h-[calc(100vh-276px)]">
       <div className="flex flex-col gap-6 max-w-[420px]">
         <h1 className="text-5xl text-orange-secondary font-fredoka">
           Entre em contato
@@ -57,7 +53,7 @@ const ContactPage = () => {
           Você pode entrar em contato da maneira que preferir. <br />{" "}
           Responderemos o mais rápido possível!
         </p>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2 my-2.5">
           <div className="flex items-center gap-3">
             <FaEnvelope size={30} className="fill-orange-secondary" />
             <p>contato@sosvidaanimal.com</p>
@@ -103,6 +99,7 @@ const ContactPage = () => {
                       <Textarea
                         placeholder="Escreva sua mensagem aqui"
                         {...field}
+                        className="resize-none min-h-24"
                       />
                     </FormControl>
                     <FormMessage />
